@@ -104,13 +104,7 @@ body {
 .cover-heading{
 	font-family: 'Montserrat Subrayada';
 	color: #987a3b;
-	-webkit-text-stroke: 1px #ff8e29;
-	text-shadow:
-	     3px 3px 0 #ff8e29,
-	     -1px -1px 0 #ff8e29,
-	     1px -1px 0 #ff8e29,
-	     -1px 1px 0 #ff8e29,
-	     1px 1px 0 #ff8e29;
+	-webkit-text-stroke: 1px black
 }
 
 .cover .btn-lg{
