@@ -7,6 +7,14 @@ body {
   background: linear-gradient(160deg, rgb(33, 81, 238), white);
 }
 
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline;
+}
+
 .bsu-image {
   width: auto;
   height: auto;
@@ -45,7 +53,8 @@ body {
           align-items: flex-start;
 }
 
-.flex-layout-col span {
+.title-buttons {
+  display: inline;
   margin-top: auto;
 }
 
@@ -57,18 +66,9 @@ body {
   font-size: 2em;
 }
 
-.flex-layout-col span {
--webkit-text-stroke: 0px;
-}
-
-.center-text {
-  display: flex;
-  height: 400px;
-}
-
 .center-text p {
 padding: 20px;
-margin-top: 20px;
+margin: 20px;
 }
 
 .flex-layout-row {
@@ -79,12 +79,16 @@ margin-top: 20px;
   flex-flow: wrap;
 }
 
+.brand-title {
+  color: orange;
+  font-size: 3em;
+}
+
 .title-section {
   color: white;
-  -webkit-text-stroke: 1px black;
   padding: 20px;
   margin-top: 20px;
-  background-image: url("/images/compondesk.jpg");
+  background-image: url("/images/resumecompdesk.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -98,4 +102,5 @@ margin-top: 20px;
 
 .colored-bg {
   background-color: rgb(255,244,229);
+  padding-bottom: 20px;
 }
