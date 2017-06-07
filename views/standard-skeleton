@@ -1,0 +1,35 @@
+<container class="jumbotron">
+
+<header class="flex-row">
+  <img src="/images/bclogo.png" class="img-fluid" title="It's Crispy">
+  <span class="flex-col">
+    <h1>BurntCode</h1>
+    <h2>Send me a message</h2>
+  </span>
+</header>
+
+<span>
+  <div class="row">
+    <span class="eq-row">
+      <div class="col-xs-12 col-sm-3 menu-style">
+        <ul>
+          <nav class="nav nav-pills nav-stacked">
+            <li>home</li>
+            <li>resume</li>
+            <li>other</li>
+            <li>stuff</li>
+          </nav>
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+      </div>
+      <div class="col-xs-12 col-sm-3 ad-col">
+      </div>
+    </span>
+  </div>
+</span>
+
+<footer>
+</footer>
+
+</container>
