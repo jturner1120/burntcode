@@ -113,7 +113,7 @@ margin: 20px;
 
 .content-title {
   font-size: 4em;
-  background-color: #fff;
+  background-color: rgb(255,244,229);
 }
 
 .content-title span {
@@ -135,10 +135,26 @@ margin: 20px;
 
 .content-body p {
   padding-top: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.content-body p::first-letter {
+  font-size: 1.333em;
+  color: rgb(232, 112, 13);
+}
+
+.navbar-default .navbar-nav > .active > a{
+    background-color: rgb(255, 205, 68) !important;
 }
 
 .list-group {
   padding-top: 15px;
+}
+
+.body-image {
+  padding-top: 15px;
+  padding-right: 10px;
 }
 
 .list-group li {
@@ -162,6 +178,10 @@ margin: 20px;
 
 @media only screen and (max-width: 480px) {
     .logo {
+      display: none;
+    }
+
+    .disappear-image {
       display: none;
     }
 }
