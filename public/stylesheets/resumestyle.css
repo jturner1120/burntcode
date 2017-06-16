@@ -4,6 +4,7 @@ html {
 
 body {
   margin-top: 50px;
+  padding-top: 65px;
   background: linear-gradient(160deg, rgb(33, 81, 238), white);
 }
 
@@ -15,6 +16,12 @@ li {
   display: inline;
 }
 
+content {
+}
+
+.pad-em{
+  margin: 0.2em;
+}
 .bsu-image {
   width: auto;
   height: auto;
@@ -100,7 +107,61 @@ margin: 20px;
     float: none;
 }
 
+.logo {
+  max-height: 50px;
+}
+
+.content-title {
+  font-size: 4em;
+  background-color: #fff;
+}
+
+.content-title span {
+  padding-left: 25px;
+}
+
+.content-body {
+  background-color: #ffffff;
+  padding-left: 30px;
+  padding-right: 10px;
+  margin-top: 1px;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  border: solid 1px;
+  border-radius: 8px;
+}
+
+.content-body p {
+  padding-top: 20px;
+}
+
+.list-group {
+  padding-top: 15px;
+}
+
+.list-group li {
+  list-style: none;
+}
+
+.panel-default > .panel-heading {
+  font-size: 2em;
+  background-color: rgb(255,244,229);
+}
+
+.skill-logo {
+  max-height: 100px;
+}
+
 .colored-bg {
+  padding-top: 10px;
   background-color: rgb(255,244,229);
   padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 480px) {
+    .logo {
+      display: none;
+    }
 }

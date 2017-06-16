@@ -14,6 +14,14 @@ router.get('/', function(req, res, next) {
   res.render('resumecover', { title: 'Burnt Code', layout: 'resumelayout.hbs', layoutDir: __dirname + "/views/layouts"});
 });
 
+router.get('/education', function(req, res, next) {
+  res.render('education', { title: 'Burnt Code', layout: 'resumelayout.hbs', layoutDir: __dirname + "/views/layouts"});
+});
+
+router.get('/skillset', function(req, res, next){
+  res.render('skillset', { title: 'Burnt Code', layout: 'resumelayout.hbs', layoutDir: __dirname + '/views/layouts'});
+});
+
 router.get('/contact', function(req, res, next) {
   res.render('contact', { title: 'Contact Burnt Code', layout: 'standard.hbs', layoutDir: __dirname + "/views/layouts"});
 });
@@ -33,7 +41,10 @@ router.post('/contact', function(req, res, next) {
   if ((name !== "") && (emailRegEx.test(email)) && (msgtext !== "")){
     var returnData = {
       class: "messageareagreen",
-      message: "Your message was sent."
+      message: "Your message was sent.",
+      nameVal: "",
+      emailVal: "",
+      textVal: ""
     };
 
     gmailtransporter.sendMail(mailOptions, function(error, info){
@@ -45,9 +56,28 @@ router.post('/contact', function(req, res, next) {
     });
     res.send(returnData);
   }else{
+    var nameClass = "form-control";
+    var emailClass = "form-control";
+    var textClass = "form-control text-area";
+
+    if (name === ""){
+      nameClass = nameClass + " fielderror";
+    }
+    if (!(emailRegEx.test(email))){
+      emailClass = emailClass + " fielderror";
+    }
+    if (msgtext === ""){
+      textClass = textClass + " fielderror";
+    }
     var returnDataFail = {
       class: "messageareared",
-      message: "There are errors on the form."
+      message: "There are errors on the form.",
+      nameClass: nameClass,
+      emailClass: emailClass,
+      textClass: textClass,
+      nameVal: name,
+      emailVal: email,
+      msgVal: msgtext
     };
     res.send(returnDataFail);
   }

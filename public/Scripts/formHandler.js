@@ -76,6 +76,9 @@ onready = $( document ).ready(function(){
     };
     $.post("/resume/contact", parameters, function(data){
       $( "#messagearea" ).attr("class", data.class).html(data.message);
+      $( "#contactname" ).val(data.nameVal).attr("class", data.nameClass);
+      $( "#contactemail" ).val(data.emailVal).attr("class", data.emailClass);
+      $( "#messagetext" ).val(data.msgVal).attr("class", data.textClass);
     });
   });
 
