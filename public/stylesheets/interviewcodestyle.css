@@ -1,0 +1,83 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.75em;
+}
+
+#fadedborder {
+  margin: 0 0 1px;
+}
+
+.subtitle{
+  color: blue;
+}
+
+.bigfont {
+  font-size: 4.5em;
+  color: inherit;
+}
+
+.midfont {
+  font-size: 2.75em;
+}
+
+.smallfont {
+  font-size: 2.00em;
+}
+
+.mutedfont {
+  opacity: .30;
+}
+
+.flexrow {
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.sitelogo {
+  max-height: 175px;
+}
+
+.title {
+  color: orange;
+}
+
+.blurb {
+  font-size: 1.15em;
+  padding-right: 15px;
+  border-bottom:
+}
+
+.borderbox {
+    background-color: #eee; /* fallback color if gradients are not supported */
+    background-image: -webkit-linear-gradient(to right, #000, #fff); /* For Chrome and Safari */
+    background-image:    -moz-linear-gradient(to right, #000, #fff); /* For old Fx (3.6 to 15) */
+    background-image:     -ms-linear-gradient(to right, #000, #fff); /* For pre-releases of IE 10*/
+    background-image:      -o-linear-gradient(to right, #000, #fff); /* For old Opera (11.1 to 12.0) */
+    background-image:         linear-gradient(to right, #000, #fff); /* Standard syntax; must be last */
+    padding: 1px 0 0 0;
+    opacity: 0.5;
+}
+
+.box {
+  background: #fff;
+  margin-top: -1px;
+}
+
+@media (min-width: 768px) {
+  .sidebar-nav .navbar .navbar-collapse {
+    padding: 0;
+    max-height: none;
+  }
+  .sidebar-nav .navbar ul {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}

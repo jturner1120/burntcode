@@ -16,12 +16,10 @@ li {
   display: inline;
 }
 
-content {
-}
-
 .pad-em{
   margin: 0.2em;
 }
+
 .bsu-image {
   width: auto;
   height: auto;
