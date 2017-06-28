@@ -15,26 +15,28 @@ a:hover {
 
 html,
 body {
-	background: url("/images/JeffandSam.png") no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-
 	height: 100%;
-	background-color: #3b5998;
-	color: #fff;
 	text-align: center;
 	text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
 
+.masthead-brand address {
+	text-align: left;
+	font-size: .75em;
+}
+
+.img-responsive{
+	margin-right: auto;
+	margin-left: auto;
+}
 
 .site-wrapper{
 	display: table;
 	width: 100%;
 	height: 100%;
 	min-height: 100%;
-	-webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-		box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+	-webkit-box-shadow: inset 0 0 100px rgba(255, 127, 0,.5);
+		box-shadow: inset 0 0 100px rgba(255, 127, 0,.5);
 }
 
 .site-wrapper-inner{
@@ -69,8 +71,8 @@ body {
 	padding-left: 0;
 	font-size: 16px;
 	font-weight: bold;
-	color: #fff;
-	color: rgba(255,255,255,.75);
+	color: blue;
+	color: rgba(0, 0 , 255,.75);
 	border-bottom: 2px solid transparent;
 }
 
@@ -84,8 +86,8 @@ body {
 .masthead-nav > .active > a,
 .masthead-nav > .active > a:hover,
 .masthead-nav > .active > a:focus{
-	color: #fff;
-	border-bottom-color: #fff;
+	color: blue;
+	border-bottom-color: orange;
 }
 
 @media (min-width: 768px) {

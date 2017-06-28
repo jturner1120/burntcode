@@ -1,0 +1,127 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="flexrow">
+        <image class="img-responsive sitelogo" src="/images/bclogo.png"></image>
+        <p class="bigfont title">BurntCode</p>
+        <p class="midfont blue">Interview Code</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-2">
+      <div class="sidebar-nav">
+        <div class="navbar navbar-default" role="navigation">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse">
+              <span class="sr-only">Toggle Navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <span class="visible-xs navbar-brand">Sidebar Menu</span>
+          </div>
+          <div class="navbar-collapse collapse sidebar-navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="/">Home Page</a></li>
+              <li><a href="/resume">Resume Page</a></li>
+              <li><a href="/projetcs">Projects Hub</a></li>
+              <li><a href="#">Other link</a></li>
+              <li><a href="#">And Another link</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-10">
+      <!-- main content area -->
+      <div class="row">
+        <div class="col-xs-10 borderbox">
+          <div class="blurb box">
+            <p class="midfont">Buy Low, Sell High</p>
+            <p class="smallfont">The scenario:</p>
+            <p>Given an array with <i>ith</i> element representing a value at <i>i</i>,
+              and with the limitations that you can only buy once and then sell once,
+              write an algorithm that maximizes the value.</p>
+            <p class="smallfont">Example:</p>
+            <p>Given [7, 3, 1, 5, 4, 6, 2]<br>The output should be five, buying at 1 and selling at 6.</p>
+            <p class="smallfont">Strategy:</p>
+            <p id="fadedborder">The solution to this problem is the maximum profit.
+            To begin we do not have a maximum profit and the minimum value is the first element.
+             Now, by looping through the array and updating our values we can find the solution.
+            On each iteration we want to know if the current element is smaller than the
+            current minimum.  If it is, set it as the new minimum.  But, if the current element is greater than
+            the current minimum, we need to check to see if it is providing the maximum profit.
+            Profit is the current index minus the minimum.  So, it is as easy as comparing the
+            current maximum profit to the index minus minimum.</p>
+            <p class="smallfont">Solutions:</p>
+            <p>Java</p>
+            <pre><code>
+              public class Solution{
+                public int maxProfit(int[] values){
+
+                  if (values.length == 0){
+                    return 0;
+                  }
+
+                  int profit = 0;
+                  int low = values[0];
+
+                  for (int i = 1; i < values.length; i++){
+                    if (values[i] > low){
+                      profit = Math.max(profit, values[i] - low);
+                    }
+                    else{
+                      min = values[i];
+                    }
+                  }
+                  return profit;
+                }
+              }
+            </code></pre>
+            <p>Python</p>
+            <pre><code>
+              def maxProfit(values):
+
+                if not values:
+                    return 0
+
+                if not all(isinstance(item, int) for item in values):
+                    return 0
+
+                profit = 0
+                minimum = values[0]
+
+                for value in values:
+
+                    if value > minimum:
+                        profit = max(profit, (value - minimum))
+                    else:
+                        minimum = value
+
+                return profit
+            </code></pre>
+            <p>JavaScript</p>
+            <pre><code>
+              var maxProfit = function(values){
+
+                  var profit = 0;
+                  var minimum = values[0];
+
+                  for (var i = 0; i < values.length; i++){
+                      if (values[i] > minimum){
+                          profit = Math.max(profit, values[i] - minimum);
+                      }else{
+                          minimum = values[i];
+                      }
+                  }
+
+                  return profit;
+              }
+            </code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

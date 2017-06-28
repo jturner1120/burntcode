@@ -11,6 +11,7 @@ var users = require('./routes/users');
 var exp = require('./routes/exp');
 var resume = require('./routes/resume');
 var interviewCode = require('./routes/interviewcode');
+var pythonproj = require('./routes/pythonproj');
 
 var app = express();
 
@@ -32,6 +33,7 @@ app.use('/users', users);
 app.use('/exp', exp);
 app.use('/resume', resume);
 app.use('/interviewcode', interviewCode);
+app.use('/pythonproj', pythonproj);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

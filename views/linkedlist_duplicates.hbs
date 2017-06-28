@@ -1,0 +1,116 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="flexrow">
+        <image class="img-responsive sitelogo" src="/images/bclogo.png"></image>
+        <p class="bigfont title">BurntCode</p>
+        <p class="midfont blue">Interview Code</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-2">
+      <div class="sidebar-nav">
+        <div class="navbar navbar-default" role="navigation">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse">
+              <span class="sr-only">Toggle Navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <span class="visible-xs navbar-brand">Sidebar Menu</span>
+          </div>
+          <div class="navbar-collapse collapse sidebar-navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="/">Home Page</a></li>
+              <li><a href="/resume">Resume Page</a></li>
+              <li><a href="/projetcs">Projects Hub</a></li>
+              <li><a href="#">Other link</a></li>
+              <li><a href="#">And Another link</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-10">
+      <!-- main content area -->
+      <div class="row">
+        <div class="col-xs-10 borderbox">
+          <div class="blurb box">
+            <p class="midfont">Remove Duplicates</p>
+            <p class="smallfont">The scenario:</p>
+            <p>Given an unordered linked list, find and remove any duplicates.</p>
+            <p class="smallfont">Example:</p>
+            <p>Calling a function on a Linked List containing 1-> 8-> 6-> 12-> 6-> 4 -||<br>
+            should alter the Linked List such that 1-> 8-> 6-> 12-> 4 -||</p>
+            <p class="smallfont">Strategy:</p>
+            <p id="fadedborder">The solution to this is fairly straightforward.
+            Two variables are needed, one to store the data from each node in
+            the linked list, and another to store the previous node.  Then, starting
+            at the first node, you store the data from the node and move to the next.
+            At this point for each node, you check to see if the data is in the storage.
+            If it is not, you add the data to storage.  If it is, you change the previous
+            pointer to point to the current pointers node.</p>
+            <p class="smallfont">Solutions:</p>
+            <p>Java</p>
+            <pre><code>
+            public class RemoveDuplicates{
+              void deleteDuplicates(LinkedListNode node){
+                Hashset<Integer> storage = new Hashset<Integer>();
+                LinkedListNode previousNode = Null;
+
+                while(node !=  Null){
+                  if (storage.contains(node.data)){
+                    previousNode.next = node.next;
+                  }else{
+                    storage.add(node.data);
+                    previousNode = node;
+                  }
+                  node = node.next;
+                }
+              }
+            }
+            </code></pre>
+            <p>Python</p>
+            <pre><code>
+              def delete_duplicates(self):
+                current = self.headNode
+                storage = []
+                previous = None
+                while current:
+                    target = current.get_data()
+                    if target in storage:
+                        previous.set_next(current.get_next())
+                        current = current.get_next()
+                    else:
+                        storage.append(target)
+                        previous = current
+                        current = current.get_next()
+            </code></pre>
+            <p>JavaScript</p>
+            <pre><code>
+              function deleteDups(linkedList){
+                  var current = linkedList.head;
+                  var storage = [];
+                  var previous = null;
+
+                  while (current){
+                      var needle = current.value;
+                      if (haystackHas(needle, storage)){
+                          previous.next = current.next;
+                          current = current.next;
+                      }else{
+                          storage.push(current.value);
+                          previous = current;
+                          current = current.next;
+                      }
+                  }
+              }
+            </code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
